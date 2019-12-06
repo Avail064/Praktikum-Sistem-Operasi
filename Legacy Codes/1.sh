@@ -1,27 +1,17 @@
-clear
+#!/bin/bash
 
-echo "Masukkan nilai : "
-read nilai
+echo “Masukkan Input dalam menit :“;
+read menit;
 
-if (("$nilai" >= 60));
-then
- echo "Anda lulus!"
-else
- echo "Anda tidak lulus"
+if [[ $menit -ge 1440 ]]; then
+    let hari=$menit/1440;
+    let menit=($menit-$hari)*60;
+    echo “$hari hari”;
 fi
 
-if (("$nilai" >=0)) && (("$nilai" <=20));
-then
- echo "Dapet E"
-elif (("$nilai" >=21)) && (("$nilai" <=40));
-then
- echo "Dapet D"
-elif (("$nilai" >=41)) && (("$nilai" <=60));
-then
- echo "Dapet c"
-elif (("$nilai" >=61)) && (("$nilai" <=80));
-then
- echo "Dapet B"
-else
- echo "Dapet A"
+if [[ $menit -ge 60 ]]; then
+     let jam=$menit/60;
+     let menit=$menit-$jam*60;
+     echo “$jam jam”;
 fi
+echo “$menit menit”
