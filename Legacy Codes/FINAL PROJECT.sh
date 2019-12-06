@@ -287,7 +287,7 @@ menu(){
 		echo ""
 		echo ""
 		echo "------------------------------"
-    echo "Sistem Pendaftaran Mahasiswa"
+    echo "toko spare part motor"
     echo "1. Daftarkan pembeli "
     echo "2. Lihat pembeli terdaftar"
 		echo "3. Beli barang"
