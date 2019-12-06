@@ -21,7 +21,7 @@ while [[ $loop -eq 1 ]]; do
       echo "Username sudah digunakan!";
       read
       clear
-    elif [[ $i == $max ]]; then	read clear
+    elif [[ $i == $max ]]; then
       #statements
       let loop=0;
       break;
@@ -29,7 +29,7 @@ while [[ $loop -eq 1 ]]; do
   done
 done
 let loop=1;												#inisialisasi loop
-while [[ $loop -eq 1 ]]; dotemp_index=1;
+while [[ $loop -eq 1 ]]; do
   read -sp "Masukkan Password	: " temp_pass1;			#input Password
   let check=0;										#inisialisiasi flag untuk cek password
   let max=$index_usr-1;
@@ -48,8 +48,7 @@ while [[ $loop -eq 1 ]]; dotemp_index=1;
     if [[ $check == 0 ]]; then
       echo "Password sudah terdaftar oleh username lain";
     else
-      echo "Okeysip"index=0	read clear
-loop=1
+      echo "Okeysip"
       usr[$index_usr]=$temp_usr;
       pass[$index_usr]=$temp_pass1;
       change_control $index_usr
